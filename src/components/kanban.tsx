@@ -105,7 +105,7 @@ export default function Kanban() {
                 key={column.status}
                 className="w-full md:w-[15.5%] flex-shrink-0"
               >
-                <div className="rounded-xl border border-gray-300 bg-gray-200 shadow-md flex flex-col h-full">
+                <div className="rounded-xl border border-gray-300 bg-gray-200 shadow-md flex flex-col">
                   <div
                     className={`rounded-t-xl ${column.color} p-3 text-white text-center font-semibold text-sm`}
                   >
@@ -118,7 +118,7 @@ export default function Kanban() {
                       <div
                         ref={provided.innerRef}
                         {...provided.droppableProps}
-                        className="p-3 overflow-y-auto max-h-[80vh] space-y-3"
+                        className="p-3 overflow-y-auto max-h-[80vh] space-y-3 pb-6"
                       >
                         {groupedKanban[column.status]?.length ? (
                           groupedKanban[column.status].map((item, index) => (
