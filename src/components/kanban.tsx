@@ -85,7 +85,7 @@ export default function Kanban() {
 
   return (
     <div className="w-full min-h-screen p-4 bg-gray-50">
-      <form className="w-full mb-4">
+      <form className="w-full mb-4 p-2">
         <input
           type="text"
           placeholder="Search..."
