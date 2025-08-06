@@ -99,12 +99,9 @@ export default function Kanban() {
         <KanbanSkeleton />
       ) : (
         <DragDropContext onDragEnd={onDragEnd}>
-          <div className="flex flex-wrap gap-4 overflow-x-auto">
+          <div className="flex flex-wrap overflow-x-auto">
             {COLUMNS.map((column) => (
-              <div
-                key={column.status}
-                className="w-full md:w-[15.5%] flex-shrink-0"
-              >
+              <div key={column.status} className="w-full md:w-1/3 lg:w-1/6 p-2">
                 <div className="rounded-xl border border-gray-300 bg-gray-200 shadow-md flex flex-col">
                   <div
                     className={`rounded-t-xl ${column.color} p-3 text-white text-center font-semibold text-sm`}
